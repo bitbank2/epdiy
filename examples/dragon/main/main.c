@@ -34,7 +34,8 @@ void idf_loop() {
 }
 
 void idf_setup() {
-    epd_init(&DEMO_BOARD, &ED097TC2, EPD_LUT_64K);
+//    epd_init(&DEMO_BOARD, &ED097TC2, EPD_LUT_64K);
+    epd_init(&DEMO_BOARD, &ED060XC3, EPD_LUT_64K);
     epd_set_vcom(1560);
     hl = epd_hl_init(EPD_BUILTIN_WAVEFORM);
 }

@@ -2,3 +2,7 @@ cmake_minimum_required(VERSION 3.16.0)
 set(EXTRA_COMPONENT_DIRS "../../")
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(color_example)
+
+# This is just to avoid that components/jpegdec includes Arduino.h
+idf_build_set_property(COMPILE_OPTIONS "-D __LINUX__" APPEND)
+
